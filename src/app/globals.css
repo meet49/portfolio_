@@ -31,3 +31,26 @@ body {
     text-wrap: balance;
   }
 }
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  cursor: pointer;
+}
+
+.menu-icon div:nth-child(2) {
+  transition: opacity 0.3s ease;
+}
+
+.menu-icon.open div:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-icon.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open div:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
