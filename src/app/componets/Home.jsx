@@ -34,14 +34,20 @@ const Home = () => {
   }, [charIndex, currentProfession]);
 
   return (
-    <div className="flex h-screen items-center justify-center ">
-      <div className="flex items-center space-x-8 ">
-        <Image src="/2.jpg" alt="Profile" className="rounded-full w-64 h-64" width={200} height={200} />
-        <div>
-          <h1 className="text-5xl font-extrabold mb-4 ">
+    <div className="flex h-screen items-center justify-center p-4 md:p-8 lg:p-12">
+      <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+        <Image
+          src="/2.jpg"
+          alt="Profile"
+          className="rounded-full w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80"
+          width={320}
+          height={320}
+        />
+        <div className="text-center md:text-left">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
             {`Hello, I'm`} <span className="text-blue-500">Meet Sojitra</span>
           </h1>
-          <p className="text-2xl text-gray-300">{displayedText}</p>
+          <p className="text-xl md:text-2xl text-gray-300">{displayedText}</p>
         </div>
       </div>
     </div>
