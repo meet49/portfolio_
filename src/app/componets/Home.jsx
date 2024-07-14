@@ -39,7 +39,7 @@ const Home = () => {
         <Image src="/2.jpg" alt="Profile" className="rounded-full w-64 h-64" width={200} height={200} />
         <div>
           <h1 className="text-5xl font-extrabold mb-4 ">
-            Hello, I'm <span className="text-blue-500">Meet Sojitra</span>
+            {`Hello, I'm`} <span className="text-blue-500">Meet Sojitra</span>
           </h1>
           <p className="text-2xl text-gray-300">{displayedText}</p>
         </div>
