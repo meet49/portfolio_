@@ -1,9 +1,11 @@
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import Navbar from "./componets/Navbar";
+import Footer from "./componets/Footer";
 
 const inter = Ubuntu({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"], 
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata = {
@@ -14,7 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

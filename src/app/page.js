@@ -1,14 +1,12 @@
-import React from 'react'
-import Navbar from './componets/Navbar'
-import Footer from './componets/Footer'
+import React from "react";
+import Home from "./componets/Home";
 
 const page = () => {
   return (
     <div>
-      <Navbar/>
-      <Footer/>
+      <Home />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
