@@ -8,26 +8,27 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  
   return (
-    <nav className="bg-gray-800 text-white p-4 xl:px-10">
+    <nav className="bg-transparent text-white p-4 xl:px-10">
       <div className="container mx-auto flex justify-between items-center">
         <div className="hidden md:flex space-x-6">
-          <a href="#home" className="hover:underline">
+          <a href="/" className="hover:underline">
             Home
           </a>
-          <a href="#myexpertise" className="hover:underline">
+          <a href="about" className="hover:underline">
             About{" "}
           </a>
         </div>
         <div className="text-xl font-bold">Meet Sojitra</div>
         <div className="hidden md:flex space-x-6">
-          <a href="#services" className="hover:underline">
+          <a href="projects" className="hover:underline">
             Projects
           </a>
-          <a href="#myexpertise" className="hover:underline">
+          <a href="myexpertise" className="hover:underline">
             My experience 
           </a>
-          <a href="#contactus" className="hover:underline">
+          <a href="contactus" className="hover:underline">
             Contact Us
           </a>
         </div>
@@ -42,16 +43,19 @@ const Navbar = () => {
       <div
         className={`md:hidden mt-4 space-y-4 ${isOpen ? "block" : "hidden"}`}
       >
-        <a href="#home" className="block hover:underline">
+        <a href="/" className="block hover:underline">
           Home
         </a>
-        <a href="#services" className="block hover:underline">
-          Services
+        <a href="about" className="block hover:underline">
+        About
         </a>
-        <a href="#myexpertise" className="block hover:underline">
-          My Expertise
+        <a href="projects" className="block hover:underline">
+        Projects
         </a>
-        <a href="#contactus" className="block hover:underline">
+        <a href="myexpertise" className="block hover:underline">
+        My experience
+        </a>
+        <a href="contactus" className="block hover:underline">
           Contact Us
         </a>
       </div>
