@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -13,24 +14,24 @@ const Navbar = () => {
     <nav className="bg-transparent text-white p-4 xl:px-10">
       <div className="container mx-auto flex justify-between items-center">
         <div className="hidden md:flex space-x-6">
-          <a href="/" className="hover:underline">
+          <Link href="/" className="hover:underline">
             Home
-          </a>
-          <a href="about" className="hover:underline">
+          </Link>
+          <Link href="about" className="hover:underline">
             About{" "}
-          </a>
+          </Link>
         </div>
         <div className="text-xl font-bold">Meet Sojitra</div>
         <div className="hidden md:flex space-x-6">
-          <a href="projects" className="hover:underline">
+          <Link href="projects" className="hover:underline">
             Projects
-          </a>
-          <a href="myexpertise" className="hover:underline">
+          </Link>
+          <Link href="myexpertise" className="hover:underline">
             My experience 
-          </a>
-          <a href="contactus" className="hover:underline">
+          </Link>
+          <Link href="contactus" className="hover:underline">
             Contact Us
-          </a>
+          </Link>
         </div>
         <div className="md:hidden flex items-center" onClick={toggleMenu}>
           <div className={`menu-icon ${isOpen ? "open" : ""}`}>
@@ -43,21 +44,21 @@ const Navbar = () => {
       <div
         className={`md:hidden mt-4 space-y-4 ${isOpen ? "block" : "hidden"}`}
       >
-        <a href="/" className="block hover:underline">
+        <Link href="/" className="block hover:underline">
           Home
-        </a>
-        <a href="about" className="block hover:underline">
+        </Link>
+        <Link href="about" className="block hover:underline">
         About
-        </a>
-        <a href="projects" className="block hover:underline">
+        </Link>
+        <Link href="projects" className="block hover:underline">
         Projects
-        </a>
-        <a href="myexpertise" className="block hover:underline">
+        </Link>
+        <Link href="myexpertise" className="block hover:underline">
         My experience
-        </a>
-        <a href="contactus" className="block hover:underline">
+        </Link>
+        <Link href="contactus" className="block hover:underline">
           Contact Us
-        </a>
+        </Link>
       </div>
     </nav>
   );

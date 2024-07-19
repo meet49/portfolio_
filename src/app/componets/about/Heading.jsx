@@ -9,7 +9,7 @@ const Heading = () => {
     const element = document.getElementById(id);
     if (element) {
       window.scrollTo({
-        top: element.offsetTop ,
+        top: element.offsetTop,
         behavior: "smooth",
       });
     }
@@ -17,7 +17,7 @@ const Heading = () => {
 
   return (
     <div
-      className="relative text-center bg-cover bg-center h-screen"
+      className="relative text-center bg-cover bg-center h-screen lazyload"
       style={{ backgroundImage: 'url("/about.jpg")' }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -25,10 +25,10 @@ const Heading = () => {
         <h1 className="text-6xl font-bold text-white z-10">
           About <span className="text-blue-500">Me</span>
         </h1>
-        <Link href="about" onClick={(e) => handleScroll(e, "about")}>
+        <Link href="#about" passHref>
           <FaChevronDown
             className="w-10 h-10 text-white cursor-pointer animate-bounce z-10"
-           
+            onClick={(e) => handleScroll(e, "about")}
           />
         </Link>
       </div>
