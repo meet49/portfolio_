@@ -35,9 +35,9 @@ const Navbar = () => {
         </div>
         <div className="md:hidden flex items-center" onClick={toggleMenu}>
           <div className={`menu-icon ${isOpen ? "open" : ""}`}>
-            <div className="w-6 h-0.5 bg-black transition-transform duration-300"></div>
-            <div className="w-6 h-0.5 bg-black transition-opacity duration-300 mt-1.5"></div>
-            <div className="w-6 h-0.5 bg-black transition-transform duration-300 mt-1.5"></div>
+            <div className="w-6 h-0.5 bg-white transition-transform duration-300"></div>
+            <div className="w-6 h-0.5 bg-white transition-opacity duration-300 mt-1.5"></div>
+            <div className="w-6 h-0.5 bg-white transition-transform duration-300 mt-1.5"></div>
           </div>
         </div>
       </div>
