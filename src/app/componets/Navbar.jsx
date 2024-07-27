@@ -1,36 +1,58 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-transparent text-white p-4 xl:px-10">
+    <nav
+      className={`p-4 xl:px-10 fixed top-0 w-full z-50 transition-colors duration-300 ${
+        isScrolled ? "bg-black" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto flex justify-between items-center">
         <div className="hidden md:flex space-x-6">
           <Link href="/" className="hover:underline">
             Home
           </Link>
           <Link href="about" className="hover:underline">
-            About{" "}
+            About
           </Link>
         </div>
-        <div className="text-xl font-bold">Meet Sojitra</div>
+        <div className="text-xl font-bold cursor-pointer" onClick={()=>{router.push("/")}}>Meet Sojitra</div>
         <div className="hidden md:flex space-x-6">
           <Link href="projects" className="hover:underline">
             Projects
           </Link>
           <Link href="myexpertise" className="hover:underline">
-            My experience 
+            My experience
           </Link>
           <Link href="contactus" className="hover:underline">
-            Contact Us
+            Contact Me
           </Link>
         </div>
         <div className="md:hidden flex items-center" onClick={toggleMenu}>
@@ -48,16 +70,16 @@ const Navbar = () => {
           Home
         </Link>
         <Link href="about" className="block hover:underline">
-        About
+          About
         </Link>
         <Link href="projects" className="block hover:underline">
-        Projects
+          Projects
         </Link>
         <Link href="myexpertise" className="block hover:underline">
-        My experience
+          My experience
         </Link>
         <Link href="contactus" className="block hover:underline">
-          Contact Us
+          Contact Me
         </Link>
       </div>
     </nav>

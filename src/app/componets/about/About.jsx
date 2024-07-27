@@ -52,7 +52,7 @@ const About = () => {
             </li>
             <li className="flex items-center">
               <strong className="mr-2 text-blue-500">Phone:</strong>{" "}
-              +91-97267-71777
+              +91 97267-71777
             </li>
             <li className="flex items-center">
               <strong className="mr-2 text-blue-500">Email:</strong>{" "}

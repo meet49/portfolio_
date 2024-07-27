@@ -17,9 +17,9 @@ const ContactUs = () => {
   };
 
   return (
-    <>
-      <div className="max-w-2xl mx-auto p-8 bg-white text-black shadow-lg rounded-lg mt-10">
-        <h2 className="text-3xl font-extrabold mb-6 text-center">Contact Us</h2>
+    < >
+      <div className="max-w-2xl mx-auto p-8 bg-white text-black shadow-lg rounded-lg mt-10" id="contactus">
+        <h2 className="text-3xl font-extrabold mb-6 text-center text-blue-500">Contact Me</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -154,22 +154,22 @@ const ContactUs = () => {
       </div> 
       <div className=" mx-auto  p-8  text-black shadow-lg rounded-lg mt-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="flex items-center p-6 text-white border rounded-md">
-          <FaPhoneAlt className="text-blue-500 text-3xl mr-4" />
+        <div className="flex items-center p-3 sm:p-4 md:p-6 text-white border rounded-md">
+          <FaPhoneAlt className="text-blue-500 text-xl mr-1 md:text-3xl md:mr-4" />
           <div>
             <h3 className="text-lg font-bold">Call Us on</h3>
             <p className="text-md">+91 9726771777</p>
           </div>
         </div>
-        <div className="flex items-center p-6 text-white border rounded-md">
-          <FaEnvelope className="text-blue-500 text-3xl mr-4" />
+        <div className="flex items-center p-3 sm:p-4 md:p-6 text-white border rounded-md">
+          <FaEnvelope className="text-blue-500 text-xl mr-2 md:text-3xl md:mr-4" />
           <div>
-            <h3 className="text-lg font-bold">Email Us</h3>
+            <h3 className="text-lg font-bold">Email Me</h3>
             <p className="text-md">meetsojitra49@gmail.com</p>
           </div>
         </div>
-        <div className="flex items-center p-6 text-white border rounded-md">
-          <FaMapMarkerAlt className="text-blue-500 text-3xl mr-4" />
+        <div className="flex items-center p-3 sm:p-4 md:p-6 text-white border rounded-md">
+          <FaMapMarkerAlt className="text-blue-500 text-xl mr-1 md:text-3xl md:mr-4" />
           <div>
             <h3 className="text-lg font-bold">Our Location</h3>
             <p className="text-md">89,Suvidha Ro-House, Near Royal Plaza</p>
